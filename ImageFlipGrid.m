@@ -58,7 +58,7 @@
             //Generate image to add to image view
             
             //BUG ***** MULTIPLY BY 2 ONLY ON RETINA IMAGE. NEED SOME CONTEXT HERE.
-            CGRect imgFrame = CGRectMake(xer*gridSizeX*2, yer*gridSizeY*2, gridSizeX*2, gridSizeY*2);
+            CGRect imgFrame = CGRectMake(xer*gridSizeX*2, yer*gridSizeY*[[UIScreen mainScreen] scale], gridSizeX*[[UIScreen mainScreen] scale], gridSizeY*2);
             CGImageRef imageRef = CGImageCreateWithImageInRect([self.image CGImage], imgFrame);
             UIImage* subImage = [UIImage imageWithCGImage: imageRef];
             CGImageRelease(imageRef);
@@ -80,7 +80,7 @@
     NSLog(@"doFlipAnimation");
     
     float delayDelta = 0.12f;
-    float rowDelay = 0.1f;
+    float rowDelay = 0.06f;
     
     float duration = 0.5f;
     
