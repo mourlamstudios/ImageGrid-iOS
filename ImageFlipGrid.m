@@ -53,8 +53,12 @@
             //Create image view slice
             UIImageView *imgView = [[UIImageView alloc]initWithFrame:CGRectMake(xer*gridSizeX,yer*gridSizeY,gridSizeX,gridSizeY)];
             
+            imgView.contentMode = UIViewContentModeScaleAspectFill;
+            
             //Generate image to add to image view
-            CGRect imgFrame = CGRectMake(xer*gridSizeX, yer*gridSizeY, gridSizeX, gridSizeY);
+            
+            //BUG ***** MULTIPLY BY 2 ONLY ON RETINA IMAGE. NEED SOME CONTEXT HERE.
+            CGRect imgFrame = CGRectMake(xer*gridSizeX*2, yer*gridSizeY*2, gridSizeX*2, gridSizeY*2);
             CGImageRef imageRef = CGImageCreateWithImageInRect([self.image CGImage], imgFrame);
             UIImage* subImage = [UIImage imageWithCGImage: imageRef];
             CGImageRelease(imageRef);
@@ -75,10 +79,10 @@
 {
     NSLog(@"doFlipAnimation");
     
-    float delayDelta = 0.1f;
-    float rowDelay = 0.13f;
+    float delayDelta = 0.12f;
+    float rowDelay = 0.1f;
     
-    float duration = 0.4f;
+    float duration = 0.5f;
     
     float maxDelayTime = 30.0f;
     float totalRowDelay = 0.0f;
@@ -116,7 +120,7 @@
             rotationAnimation.duration = duration;
             rotationAnimation.beginTime = CACurrentMediaTime()+calculatedDelay;
             rotationAnimation.additive = YES;
-            rotationAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
+            rotationAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
             [imgView.layer addAnimation:rotationAnimation forKey:@"rotationAnimation1"];
             
             //OPACITY ANIMATION
@@ -131,25 +135,22 @@
                                           nil];
             opacityAnimation.values = [NSArray arrayWithObjects:
                                         [NSNumber numberWithFloat: 1.0],
-                                        [NSNumber numberWithFloat: 0.2],
-                                        [NSNumber numberWithFloat: 0.2],
+                                        [NSNumber numberWithFloat: 0],
+                                        [NSNumber numberWithFloat: 0],
                                         [NSNumber numberWithFloat: 1.0],
                                         nil];
             opacityAnimation.duration = duration;
             opacityAnimation.beginTime = CACurrentMediaTime()+calculatedDelay;
-            opacityAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
+            opacityAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
             
             [imgView.layer addAnimation:opacityAnimation forKey:@"opacity"];
-            
-            
-            
         }
         
         totalRowDelay += rowDelay;
         
     }
     
-    [NSTimer scheduledTimerWithTimeInterval:3.0f target:self selector:@selector(doFlipAnimation) userInfo:nil repeats:NO];
+    [NSTimer scheduledTimerWithTimeInterval:6.0f target:self selector:@selector(doFlipAnimation) userInfo:nil repeats:NO];
 }
 
 

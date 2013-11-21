@@ -15,5 +15,7 @@
 @property(strong) UIImage *image;
 
 @property(strong) NSMutableArray *imageGrid;
+@property(strong) NSMutableArray *subImages1;
+@property(strong) NSMutableArray *subImages2;
 
 @end
