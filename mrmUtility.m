@@ -10,7 +10,7 @@
 #import <QuartzCore/QuartzCore.h>
 
 
-#define kTRANSFORM_PERSPECTIVE 5000
+#define kTRANSFORM_PERSPECTIVE 500
 
 @implementation mrmUtility
 

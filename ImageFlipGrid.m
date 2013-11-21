@@ -11,8 +11,8 @@
 
 @implementation ImageFlipGrid
 
-#define kGridCountX  10
-#define kGridCountY  17
+#define kGridCountX  15
+#define kGridCountY  3
 
 -(id) initWithImage: (UIImage*) image
 {
@@ -21,7 +21,7 @@
     if(self=[super init])
     {
         //self.view.backgroundColor = [UIColor redColor];
-        self.view.frame = CGRectMake(0, 0, 320,568);
+        self.view.frame = CGRectMake(0, 0, image.size.width,image.size.height);
         
         NSLog(@"%f, %f",self.image.size.width,self.image.size.height);
         
@@ -76,9 +76,9 @@
     NSLog(@"doFlipAnimation");
     
     float delayDelta = 0.1f;
-    float rowDelay = 0.1f;
+    float rowDelay = 0.13f;
     
-    float duration = 0.5f;
+    float duration = 0.4f;
     
     float maxDelayTime = 30.0f;
     float totalRowDelay = 0.0f;
@@ -102,7 +102,7 @@
             rotationAnimation.keyTimes = [NSArray arrayWithObjects:
                                           [NSNumber numberWithFloat: 0],
                                        [NSNumber numberWithFloat: 0.5],
-                                        [NSNumber numberWithFloat: 0.501],
+                                        [NSNumber numberWithFloat: 0.50001],
                                        [NSNumber numberWithFloat: 1.0],
                                        nil];
             rotationAnimation.values = [NSArray arrayWithObjects:
@@ -118,6 +118,31 @@
             rotationAnimation.additive = YES;
             rotationAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
             [imgView.layer addAnimation:rotationAnimation forKey:@"rotationAnimation1"];
+            
+            //OPACITY ANIMATION
+            CAKeyframeAnimation *opacityAnimation;
+            opacityAnimation = [CAKeyframeAnimation animationWithKeyPath:@"opacity"];
+            
+            opacityAnimation.keyTimes = [NSArray arrayWithObjects:
+                                          [NSNumber numberWithFloat: 0],
+                                          [NSNumber numberWithFloat: 0.5],
+                                          [NSNumber numberWithFloat: 0.50001],
+                                          [NSNumber numberWithFloat: 1.0],
+                                          nil];
+            opacityAnimation.values = [NSArray arrayWithObjects:
+                                        [NSNumber numberWithFloat: 1.0],
+                                        [NSNumber numberWithFloat: 0.2],
+                                        [NSNumber numberWithFloat: 0.2],
+                                        [NSNumber numberWithFloat: 1.0],
+                                        nil];
+            opacityAnimation.duration = duration;
+            opacityAnimation.beginTime = CACurrentMediaTime()+calculatedDelay;
+            opacityAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
+            
+            [imgView.layer addAnimation:opacityAnimation forKey:@"opacity"];
+            
+            
+            
         }
         
         totalRowDelay += rowDelay;

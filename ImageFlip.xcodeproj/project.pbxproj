@@ -479,6 +479,7 @@
 				D8B28D22183D580C00A7D8BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D8B28D23183D580C00A7D8BB /* Build configuration list for PBXNativeTarget "ImageFlipTests" */ = {
 			isa = XCConfigurationList;
@@ -487,6 +488,7 @@
 				D8B28D25183D580C00A7D8BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
