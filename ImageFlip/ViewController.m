@@ -8,6 +8,9 @@
 
 #import "ViewController.h"
 #import "ImageFlipGrid.h"
+#import "mrmUtility.h"
+
+
 
 @interface ViewController ()
 
@@ -23,6 +26,21 @@
     ImageFlipGrid *flipGrid = [[ImageFlipGrid alloc]initWithImage: [UIImage imageNamed:@"testImage.png"]];
     
     [self.view addSubview: flipGrid.view];
+    
+    
+    
+    //Animate flip grid
+//    flipGrid.view.layer.transform = [mrmUtility rotateView:flipGrid.view byX:0 byY:0];
+//    
+//    CABasicAnimation *basic = [CABasicAnimation animationWithKeyPath:@"transform.rotation.y"];
+//    
+//    basic.duration = 5.0;
+//    basic.autoreverses = YES;
+//    basic.byValue = [NSNumber numberWithFloat: M_PI/20];
+//    basic.repeatCount = 9999;
+//    
+//    
+//    [flipGrid.view.layer addAnimation:basic forKey:@"basic"];
 }
 
 - (void)didReceiveMemoryWarning
