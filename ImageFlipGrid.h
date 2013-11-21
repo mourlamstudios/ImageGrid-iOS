@@ -10,12 +10,13 @@
 
 @interface ImageFlipGrid : UIViewController
 
--(id) initWithImage: (UIImage*) image;
-
 @property(strong) UIImage *image;
-
 @property(strong) NSMutableArray *imageGrid;
-@property(strong) NSMutableArray *subImages1;
-@property(strong) NSMutableArray *subImages2;
+@property(assign) CGSize gridCount;
+
+
+
+-(id) initWithImage: (UIImage*) image gridCount: (CGSize) count;
+-(void) doFlipAnimation;
 
 @end

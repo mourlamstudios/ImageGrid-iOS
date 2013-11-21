@@ -11,12 +11,11 @@
 
 @implementation ImageFlipGrid
 
-#define kGridCountX  15
-#define kGridCountY  3
 
--(id) initWithImage: (UIImage*) image
+-(id) initWithImage: (UIImage*) image gridCount: (CGSize) count
 {
     self.image = [image copy];
+    self.gridCount = count;
     
     if(self=[super init])
     {
@@ -41,14 +40,14 @@
 {
     NSLog(@"ImageFlipGrid : generateImageGrid");
     
-    float gridSizeX = self.view.frame.size.width/kGridCountX;
-    float gridSizeY = self.view.frame.size.height/kGridCountY;
+    float gridSizeX = self.view.frame.size.width/self.gridCount.width;
+    float gridSizeY = self.view.frame.size.height/self.gridCount.height;
     
     self.imageGrid = [[NSMutableArray alloc]init];
     
-    for(int yer=0;yer<kGridCountY;yer++)
+    for(int yer=0;yer<self.gridCount.height;yer++)
     {
-        for(int xer=0;xer<kGridCountX;xer++)
+        for(int xer=0;xer<self.gridCount.width;xer++)
         {
             //Create image view slice
             UIImageView *imgView = [[UIImageView alloc]initWithFrame:CGRectMake(xer*gridSizeX,yer*gridSizeY,gridSizeX,gridSizeY)];
@@ -65,6 +64,9 @@
             
             //Add generated image to image view
             [imgView setImage: subImage];
+            
+            //Setup initial transform with perspective
+            imgView.layer.transform = [mrmUtility rotateView:imgView byX:0 byY:0];
             
             [self.view addSubview:imgView];
             
@@ -87,17 +89,13 @@
     float maxDelayTime = 30.0f;
     float totalRowDelay = 0.0f;
     
-    for(int yer=0;yer<kGridCountY;yer++)
+    for(int yer=0;yer<self.gridCount.height;yer++)
     {
-        for(int xer=0;xer<kGridCountX;xer++)
+        for(int xer=0;xer<self.gridCount.width;xer++)
         {
-            UIImageView *imgView = [self.imageGrid objectAtIndex: yer*kGridCountX+xer];
+            UIImageView *imgView = [self.imageGrid objectAtIndex: yer*self.gridCount.width+xer];
             
             float calculatedDelay = xer*delayDelta + totalRowDelay;
-            
-            //Setup initial transform
-            imgView.layer.transform = [mrmUtility rotateView:imgView byX:0 byY:0];
-            
             
             //ROTATION ANIMATION
             CAKeyframeAnimation *rotationAnimation;
@@ -119,7 +117,8 @@
     
             rotationAnimation.duration = duration;
             rotationAnimation.beginTime = CACurrentMediaTime()+calculatedDelay;
-            rotationAnimation.additive = YES;
+            rotationAnimation.fillMode = kCAFillModeForwards;
+            rotationAnimation.removedOnCompletion = NO;
             rotationAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
             [imgView.layer addAnimation:rotationAnimation forKey:@"rotationAnimation1"];
             

@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class ImageFlipGrid;
+
 @interface ViewController : UIViewController
+
+@property(strong) ImageFlipGrid *flipGrid;
 
 @end

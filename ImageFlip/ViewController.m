@@ -23,9 +23,9 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    ImageFlipGrid *flipGrid = [[ImageFlipGrid alloc]initWithImage: [UIImage imageNamed:@"testImage.png"]];
+    self.flipGrid = [[ImageFlipGrid alloc]initWithImage: [UIImage imageNamed:@"testImage.png"] gridCount:CGSizeMake(15,3)];
     
-    [self.view addSubview: flipGrid.view];
+    [self.view addSubview: self.flipGrid.view];
     
     
     
