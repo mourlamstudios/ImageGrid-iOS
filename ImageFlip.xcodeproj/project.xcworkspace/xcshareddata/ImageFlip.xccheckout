@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>5EB02367-FCFF-450D-BF0C-1D5CD929769B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ImageFlip</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E7143848-2DD9-4F88-B285-19984109E969</key>
+		<string>https://github.com/mourlamstudios/ImageGrid-iOS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ImageFlip.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E7143848-2DD9-4F88-B285-19984109E969</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/mourlamstudios/ImageGrid-iOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E7143848-2DD9-4F88-B285-19984109E969</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E7143848-2DD9-4F88-B285-19984109E969</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ImageGrid-iOS</string>
+		</dict>
+	</array>
+</dict>
+</plist>

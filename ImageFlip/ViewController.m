@@ -27,6 +27,9 @@
     
     [self.view addSubview: self.flipGrid.view];
     
+    CGRect originalFrame = self.flipGrid.view.frame;
+    originalFrame.origin.y = 40;
+    self.flipGrid.view.frame = originalFrame;
     
     
     //Animate flip grid
