@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		342DB2A0183DAB6400409BD0 /* testImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 342DB29F183DAB6400409BD0 /* testImage@2x.png */; };
 		342DB2A2183DB15A00409BD0 /* blurred@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 342DB2A1183DB15A00409BD0 /* blurred@2x.png */; };
+		34BFDE1E186F4EF60061577E /* ImageFlipGrid.m in Sources */ = {isa = PBXBuildFile; fileRef = 34BFDE1B186F4EF60061577E /* ImageFlipGrid.m */; };
+		34BFDE1F186F4EF60061577E /* mrmUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 34BFDE1D186F4EF60061577E /* mrmUtility.m */; };
 		D8B28CF2183D580C00A7D8BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8B28CF1183D580C00A7D8BB /* Foundation.framework */; };
 		D8B28CF4183D580C00A7D8BB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8B28CF3183D580C00A7D8BB /* CoreGraphics.framework */; };
 		D8B28CF6183D580C00A7D8BB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8B28CF5183D580C00A7D8BB /* UIKit.framework */; };
@@ -18,29 +20,16 @@
 		D8B28D05183D580C00A7D8BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8B28D03183D580C00A7D8BB /* Main.storyboard */; };
 		D8B28D08183D580C00A7D8BB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8B28D07183D580C00A7D8BB /* ViewController.m */; };
 		D8B28D0A183D580C00A7D8BB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8B28D09183D580C00A7D8BB /* Images.xcassets */; };
-		D8B28D11183D580C00A7D8BB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8B28D10183D580C00A7D8BB /* XCTest.framework */; };
-		D8B28D12183D580C00A7D8BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8B28CF1183D580C00A7D8BB /* Foundation.framework */; };
-		D8B28D13183D580C00A7D8BB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8B28CF5183D580C00A7D8BB /* UIKit.framework */; };
-		D8B28D1B183D580C00A7D8BB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D8B28D19183D580C00A7D8BB /* InfoPlist.strings */; };
-		D8B28D1D183D580C00A7D8BB /* ImageFlipTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D8B28D1C183D580C00A7D8BB /* ImageFlipTests.m */; };
-		D8B28D28183D589600A7D8BB /* ImageFlipGrid.m in Sources */ = {isa = PBXBuildFile; fileRef = D8B28D27183D589600A7D8BB /* ImageFlipGrid.m */; };
 		D8B28D2A183D598100A7D8BB /* testImage.png in Resources */ = {isa = PBXBuildFile; fileRef = D8B28D29183D598100A7D8BB /* testImage.png */; };
-		D8B28D2D183D650F00A7D8BB /* mrmUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = D8B28D2C183D650E00A7D8BB /* mrmUtility.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		D8B28D14183D580C00A7D8BB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D8B28CE6183D580C00A7D8BB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D8B28CED183D580C00A7D8BB;
-			remoteInfo = ImageFlip;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		342DB29F183DAB6400409BD0 /* testImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "testImage@2x.png"; sourceTree = SOURCE_ROOT; };
-		342DB2A1183DB15A00409BD0 /* blurred@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blurred@2x.png"; sourceTree = "<group>"; };
+		342DB2A1183DB15A00409BD0 /* blurred@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "blurred@2x.png"; path = "../blurred@2x.png"; sourceTree = "<group>"; };
+		34BFDE1A186F4EF60061577E /* ImageFlipGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageFlipGrid.h; sourceTree = "<group>"; };
+		34BFDE1B186F4EF60061577E /* ImageFlipGrid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageFlipGrid.m; sourceTree = "<group>"; };
+		34BFDE1C186F4EF60061577E /* mrmUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mrmUtility.h; sourceTree = "<group>"; };
+		34BFDE1D186F4EF60061577E /* mrmUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mrmUtility.m; sourceTree = "<group>"; };
 		D8B28CEE183D580C00A7D8BB /* ImageFlip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageFlip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8B28CF1183D580C00A7D8BB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D8B28CF3183D580C00A7D8BB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -55,16 +44,8 @@
 		D8B28D06183D580C00A7D8BB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		D8B28D07183D580C00A7D8BB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D8B28D09183D580C00A7D8BB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		D8B28D0F183D580C00A7D8BB /* ImageFlipTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageFlipTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8B28D10183D580C00A7D8BB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		D8B28D18183D580C00A7D8BB /* ImageFlipTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ImageFlipTests-Info.plist"; sourceTree = "<group>"; };
-		D8B28D1A183D580C00A7D8BB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		D8B28D1C183D580C00A7D8BB /* ImageFlipTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageFlipTests.m; sourceTree = "<group>"; };
-		D8B28D26183D589600A7D8BB /* ImageFlipGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageFlipGrid.h; sourceTree = "<group>"; };
-		D8B28D27183D589600A7D8BB /* ImageFlipGrid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageFlipGrid.m; sourceTree = "<group>"; };
 		D8B28D29183D598100A7D8BB /* testImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testImage.png; sourceTree = SOURCE_ROOT; };
-		D8B28D2B183D650E00A7D8BB /* mrmUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mrmUtility.h; sourceTree = "<group>"; };
-		D8B28D2C183D650E00A7D8BB /* mrmUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mrmUtility.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,29 +59,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D8B28D0C183D580C00A7D8BB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D8B28D11183D580C00A7D8BB /* XCTest.framework in Frameworks */,
-				D8B28D13183D580C00A7D8BB /* UIKit.framework in Frameworks */,
-				D8B28D12183D580C00A7D8BB /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34BFDE19186F4EF60061577E /* ImageFlipGrid */ = {
+			isa = PBXGroup;
+			children = (
+				34BFDE1A186F4EF60061577E /* ImageFlipGrid.h */,
+				34BFDE1B186F4EF60061577E /* ImageFlipGrid.m */,
+				34BFDE1C186F4EF60061577E /* mrmUtility.h */,
+				34BFDE1D186F4EF60061577E /* mrmUtility.m */,
+			);
+			name = ImageFlipGrid;
+			path = ../ImageFlipGrid;
+			sourceTree = "<group>";
+		};
 		D8B28CE5183D580C00A7D8BB = {
 			isa = PBXGroup;
 			children = (
-				342DB2A1183DB15A00409BD0 /* blurred@2x.png */,
-				D8B28D2B183D650E00A7D8BB /* mrmUtility.h */,
-				D8B28D2C183D650E00A7D8BB /* mrmUtility.m */,
-				D8B28D26183D589600A7D8BB /* ImageFlipGrid.h */,
-				D8B28D27183D589600A7D8BB /* ImageFlipGrid.m */,
+				34BFDE19186F4EF60061577E /* ImageFlipGrid */,
 				D8B28CF7183D580C00A7D8BB /* ImageFlip */,
-				D8B28D16183D580C00A7D8BB /* ImageFlipTests */,
 				D8B28CF0183D580C00A7D8BB /* Frameworks */,
 				D8B28CEF183D580C00A7D8BB /* Products */,
 			);
@@ -110,7 +88,6 @@
 			isa = PBXGroup;
 			children = (
 				D8B28CEE183D580C00A7D8BB /* ImageFlip.app */,
-				D8B28D0F183D580C00A7D8BB /* ImageFlipTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -143,30 +120,13 @@
 		D8B28CF8183D580C00A7D8BB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				342DB2A1183DB15A00409BD0 /* blurred@2x.png */,
 				D8B28D29183D598100A7D8BB /* testImage.png */,
 				342DB29F183DAB6400409BD0 /* testImage@2x.png */,
 				D8B28CF9183D580C00A7D8BB /* ImageFlip-Info.plist */,
 				D8B28CFA183D580C00A7D8BB /* InfoPlist.strings */,
 				D8B28CFD183D580C00A7D8BB /* main.m */,
 				D8B28CFF183D580C00A7D8BB /* ImageFlip-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		D8B28D16183D580C00A7D8BB /* ImageFlipTests */ = {
-			isa = PBXGroup;
-			children = (
-				D8B28D1C183D580C00A7D8BB /* ImageFlipTests.m */,
-				D8B28D17183D580C00A7D8BB /* Supporting Files */,
-			);
-			path = ImageFlipTests;
-			sourceTree = "<group>";
-		};
-		D8B28D17183D580C00A7D8BB /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				D8B28D18183D580C00A7D8BB /* ImageFlipTests-Info.plist */,
-				D8B28D19183D580C00A7D8BB /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -191,24 +151,6 @@
 			productReference = D8B28CEE183D580C00A7D8BB /* ImageFlip.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D8B28D0E183D580C00A7D8BB /* ImageFlipTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D8B28D23183D580C00A7D8BB /* Build configuration list for PBXNativeTarget "ImageFlipTests" */;
-			buildPhases = (
-				D8B28D0B183D580C00A7D8BB /* Sources */,
-				D8B28D0C183D580C00A7D8BB /* Frameworks */,
-				D8B28D0D183D580C00A7D8BB /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D8B28D15183D580C00A7D8BB /* PBXTargetDependency */,
-			);
-			name = ImageFlipTests;
-			productName = ImageFlipTests;
-			productReference = D8B28D0F183D580C00A7D8BB /* ImageFlipTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -217,11 +159,6 @@
 			attributes = {
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = mourlamstudios;
-				TargetAttributes = {
-					D8B28D0E183D580C00A7D8BB = {
-						TestTargetID = D8B28CED183D580C00A7D8BB;
-					};
-				};
 			};
 			buildConfigurationList = D8B28CE9183D580C00A7D8BB /* Build configuration list for PBXProject "ImageFlip" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -237,7 +174,6 @@
 			projectRoot = "";
 			targets = (
 				D8B28CED183D580C00A7D8BB /* ImageFlip */,
-				D8B28D0E183D580C00A7D8BB /* ImageFlipTests */,
 			);
 		};
 /* End PBXProject section */
@@ -256,14 +192,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D8B28D0D183D580C00A7D8BB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D8B28D1B183D580C00A7D8BB /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -273,29 +201,13 @@
 			files = (
 				D8B28D08183D580C00A7D8BB /* ViewController.m in Sources */,
 				D8B28D02183D580C00A7D8BB /* AppDelegate.m in Sources */,
-				D8B28D28183D589600A7D8BB /* ImageFlipGrid.m in Sources */,
+				34BFDE1E186F4EF60061577E /* ImageFlipGrid.m in Sources */,
 				D8B28CFE183D580C00A7D8BB /* main.m in Sources */,
-				D8B28D2D183D650F00A7D8BB /* mrmUtility.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D8B28D0B183D580C00A7D8BB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D8B28D1D183D580C00A7D8BB /* ImageFlipTests.m in Sources */,
+				34BFDE1F186F4EF60061577E /* mrmUtility.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		D8B28D15183D580C00A7D8BB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D8B28CED183D580C00A7D8BB /* ImageFlip */;
-			targetProxy = D8B28D14183D580C00A7D8BB /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D8B28CFA183D580C00A7D8BB /* InfoPlist.strings */ = {
@@ -312,14 +224,6 @@
 				D8B28D04183D580C00A7D8BB /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		D8B28D19183D580C00A7D8BB /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D8B28D1A183D580C00A7D8BB /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -426,48 +330,6 @@
 			};
 			name = Release;
 		};
-		D8B28D24183D580C00A7D8BB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ImageFlip.app/ImageFlip";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ImageFlip/ImageFlip-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "ImageFlipTests/ImageFlipTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		D8B28D25183D580C00A7D8BB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ImageFlip.app/ImageFlip";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ImageFlip/ImageFlip-Prefix.pch";
-				INFOPLIST_FILE = "ImageFlipTests/ImageFlipTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -485,15 +347,6 @@
 			buildConfigurations = (
 				D8B28D21183D580C00A7D8BB /* Debug */,
 				D8B28D22183D580C00A7D8BB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D8B28D23183D580C00A7D8BB /* Build configuration list for PBXNativeTarget "ImageFlipTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D8B28D24183D580C00A7D8BB /* Debug */,
-				D8B28D25183D580C00A7D8BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
